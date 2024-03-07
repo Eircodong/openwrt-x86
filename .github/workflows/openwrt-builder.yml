@@ -30,11 +30,11 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
-
+    runs-on: ubuntu-latest
+           
     steps:
-    
-        - name: Free Disk Space (Ubuntu)
+
+    - name: Free Disk Space (Ubuntu)
       uses: jlumbroso/free-disk-space@main
       with:
         # this might remove tools that are actually needed,
