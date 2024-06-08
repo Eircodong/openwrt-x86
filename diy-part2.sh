@@ -21,3 +21,5 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/M
 
 # 添加插件
 git clone --depth=1 https://github.com/sirpdboy/luci-app-netwizard package/luci-app-netwizard
+# 删除重复插件
+rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd*,miniupnpd-iptables,wireless-regdb}
