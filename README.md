@@ -1,39 +1,17 @@
-**English** | [中文](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
+使用https://github.com/P3TERX/Actions-OpenWrt 模板在线编译lean源码openwrt https://github.com/coolsnowwolf/lede 并打包了大部分常用插件与驱动
+workflow部分代码源自
+https://github.com/haiibo/OpenWrt
+https://github.com/dzlea/ActionsBuildOpenWRT
+再次感谢各位大佬的分享与解答
+集成了istoreos的首页与应用商店
+集成了sirpdboy的设置向导插件可以方便一键设置网络 https://github.com/sirpdboy/luci-app-netwizard
+默认后台ip：192.168.100.1
+默认登录密码：password
+默认wan口 eth1 默认lan口 eth0 （就是大雕常规默认）
+切换至6.6内核版本 
 
-# Actions-OpenWrt
-
-[![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square&label=LICENSE)](https://github.com/P3TERX/Actions-OpenWrt/blob/master/LICENSE)
-![GitHub Stars](https://img.shields.io/github/stars/P3TERX/Actions-OpenWrt.svg?style=flat-square&label=Stars&logo=github)
-![GitHub Forks](https://img.shields.io/github/forks/P3TERX/Actions-OpenWrt.svg?style=flat-square&label=Forks&logo=github)
-
-A template for building OpenWrt with GitHub Actions
-
-## Usage
-
-- Click the [Use this template](https://github.com/P3TERX/Actions-OpenWrt/generate) button to create a new repository.
-- Generate `.config` files using [Lean's OpenWrt](https://github.com/coolsnowwolf/lede) source code. ( You can change it through environment variables in the workflow file. )
-- Push `.config` file to the GitHub repository.
-- Select `Build OpenWrt` on the Actions page.
-- Click the `Run workflow` button.
-- When the build is complete, click the `Artifacts` button in the upper right corner of the Actions page to download the binaries.
-
-## Tips
-
-- It may take a long time to create a `.config` file and build the OpenWrt firmware. Thus, before create repository to build your own firmware, you may check out if others have already built it which meet your needs by simply [search `Actions-Openwrt` in GitHub](https://github.com/search?q=Actions-openwrt).
-- Add some meta info of your built firmware (such as firmware architecture and installed packages) to your repository introduction, this will save others' time.
-
-## Credits
-
-- [Microsoft Azure](https://azure.microsoft.com)
-- [GitHub Actions](https://github.com/features/actions)
-- [OpenWrt](https://github.com/openwrt/openwrt)
-- [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)
-- [Mikubill/transfer](https://github.com/Mikubill/transfer)
-- [softprops/action-gh-release](https://github.com/softprops/action-gh-release)
-- [Mattraks/delete-workflow-runs](https://github.com/Mattraks/delete-workflow-runs)
-- [dev-drprasad/delete-older-releases](https://github.com/dev-drprasad/delete-older-releases)
-- [peter-evans/repository-dispatch](https://github.com/peter-evans/repository-dispatch)
-
-## License
-
-[MIT](https://github.com/P3TERX/Actions-OpenWrt/blob/main/LICENSE) © [**P3TERX**](https://p3terx.com)
+截图展示
+![image](https://github.com/Eircodong/openwrt-x86/assets/59461660/bc2d284d-e791-46f5-bf73-a738454729a9)
+![image](https://github.com/Eircodong/openwrt-x86/assets/59461660/1d5137ad-7137-43f3-a44c-2260117b0dfe)
+![image](https://github.com/Eircodong/openwrt-x86/assets/59461660/6bf269c2-02c3-472b-8772-370d96f8b05f)
+![image](https://github.com/Eircodong/openwrt-x86/assets/59461660/5609c037-c5ec-428d-9b6d-ea26887526bf)
