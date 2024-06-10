@@ -1,13 +1,22 @@
 使用https://github.com/P3TERX/Actions-OpenWrt 模板在线编译lean源码openwrt https://github.com/coolsnowwolf/lede 并打包了大部分常用插件与驱动
+
+
 workflow部分代码源自
 https://github.com/haiibo/OpenWrt
 https://github.com/dzlea/ActionsBuildOpenWRT
 再次感谢各位大佬的分享与解答
+
+
 集成了istoreos的首页与应用商店
+
 集成了sirpdboy的设置向导插件可以方便一键设置网络 https://github.com/sirpdboy/luci-app-netwizard
+
 默认后台ip：192.168.100.1
+
 默认登录密码：password
+
 默认wan口 eth1 默认lan口 eth0 （就是大雕常规默认）
+
 切换至6.6内核版本 
 
 截图展示
