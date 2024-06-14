@@ -1,4 +1,7 @@
-使用https://github.com/P3TERX/Actions-OpenWrt 模板在线编译lean源码openwrt https://github.com/coolsnowwolf/lede 并打包了大部分常用插件与驱动
+使用https://github.com/P3TERX/Actions-OpenWrt 模板自动定时每周五12:00编译
+
+
+使用lean源码openwrt https://github.com/coolsnowwolf/lede 并打包了大部分常用插件与驱动
 
 
 workflow部分代码源自
