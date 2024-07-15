@@ -35,8 +35,3 @@ sed -i "s/${orig_version}/R${date_version} by EircoD/g" package/lean/default-set
 
 # 删除重复插件
 rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd*,miniupnpd-iptables,wireless-regdb}
-rm -rf feeds/smpackages/adguardhome
-rm -rf feeds/smpackages/luci-app-adguardhome
-
-# 添加luci-app-adguardhome
-git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
