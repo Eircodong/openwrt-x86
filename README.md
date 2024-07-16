@@ -13,6 +13,7 @@ https://github.com/dzlea/ActionsBuildOpenWRT
 集成了istoreos的首页与应用商店
 
 集成了sirpdboy的设置向导插件可以方便一键设置网络 https://github.com/sirpdboy/luci-app-netwizard
+netwizard已移除，发现在某种情况下会造成设置错误。请手动设置。
 
 默认后台ip：192.168.100.1
 
