@@ -17,3 +17,6 @@
 
 # 添加软件源
 sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
+# 切换luci版本
+sed -i 's/src-git luci https://github.com/coolsnowwolf/luci/#src-git luci https://github.com/coolsnowwolf/luci/g'feeds.conf.default
+sed -i '#src-git luci https://github.com/coolsnowwolf/luci.git;openwrt-23.05/src-git luci https://github.com/coolsnowwolf/luci.git;openwrt-23.05/g'feeds.conf.default
