@@ -16,3 +16,4 @@
 #!/bin/bash
 
 # 添加软件源
+sed -i '$a src-git smpackage https://github.com/kiddin9/kwrt-packages' feeds.conf.default
