@@ -34,7 +34,6 @@ sed -i "s/${orig_version}/R${date_version} by EircoD/g" package/lean/default-set
 git clone --depth=1 https://github.com/tty228/luci-app-wechatpush package/luci-app-wechatpush
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
-rm -rf ./feeds/luci/applications/luci-app-netdata/
 git clone https://github.com/Jason6111/luci-app-netdata ./feeds/luci/applications/luci-app-netdata/  
 git clone --depth=1 -b master https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 
