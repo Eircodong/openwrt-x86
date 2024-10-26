@@ -34,11 +34,8 @@ sed -i "s/${orig_version}/R${date_version} by EircoD/g" package/lean/default-set
 git clone --depth=1 https://github.com/tty228/luci-app-wechatpush package/luci-app-wechatpush
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
-git clone https://github.com/Jason6111/luci-app-netdata ./feeds/luci/applications/luci-app-netdata/  
+git clone https://github.com/Jason6111/luci-app-netdata ./feeds/luci/applications/luci-app-netdata
 git clone --depth=1 -b master https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
-
-# 科学上网插件
-git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app-ssr-plus
 
 # uu加速器下载失败
 sed -i "s/openwrt-\$(UU_ARCH)\/\$(PKG_VERSION)\/uu.tar.gz?/openwrt-\$(UU_ARCH)\/\$(PKG_VERSION)\//g" feeds/packages/net/uugamebooster/Makefile
