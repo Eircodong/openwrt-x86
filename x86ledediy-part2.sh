@@ -31,12 +31,11 @@ orig_version=$(cat "package/lean/default-settings/files/zzz-default-settings" | 
 sed -i "s/${orig_version}/R${date_version} by EircoD/g" package/lean/default-settings/files/zzz-default-settings
 
 # 添加插件
-git clone --depth=1 https://github.com/tty228/luci-app-wechatpush package/luci-app-wechatpush
-git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
-git clone --depth=1 https://github.com/destan19/OpenAppFilter package/OpenAppFilter
-git clone https://github.com/Jason6111/luci-app-netdata ./feeds/luci/applications/luci-app-netdata
-git clone --depth=1 -b master https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
+
 
 # uu加速器下载失败
 sed -i "s/openwrt-\$(UU_ARCH)\/\$(PKG_VERSION)\/uu.tar.gz?/openwrt-\$(UU_ARCH)\/\$(PKG_VERSION)\//g" feeds/packages/net/uugamebooster/Makefile
 sed -i "s/\$(PKG_NAME)-\$(UU_ARCH)-\$(PKG_VERSION).tar.gz/uu.tar.gz/g" feeds/packages/net/uugamebooster/Makefile
+
+#删除重复插件
+rm -rf feeds/smpackage/{adguardhome,base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd*,miniupnpd-iptables,wireless-regdb,luci-theme-argon,luci-theme-argone,luci-app-adguardhome}
