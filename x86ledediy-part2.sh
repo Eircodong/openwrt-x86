@@ -21,4 +21,4 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-l
 
 
 # 添加插件
-git clone --depth=1 -b master https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-argon-config
+git clone --depth=1 -b master https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome
