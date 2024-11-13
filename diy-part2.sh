@@ -37,5 +37,5 @@ find ./ | grep Makefile | grep mosdns | xargs rm -f
 git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
 git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 # 游戏加速器
-git_sparse_clone https://github.com/coolsnowwolf/luci/tree/openwrt-23.05/applications/luci-app-uugamebooster package/luci-app-uugamebooster
-git_sparse_clone https://github.com/coolsnowwolf/packages/tree/master/net/uugamebooster package/uugamebooster
+git_sparse_clone https://github.com/coolsnowwolf/luci/tree/openwrt-23.05/applications/luci-app-uugamebooster
+git_sparse_clone https://github.com/coolsnowwolf/packages/tree/master/net/uugamebooster
