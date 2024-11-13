@@ -13,8 +13,23 @@
 # 设置默认ip
 sed -i 's/192.168.1.1/192.168.100.1/g' package/base-files/luci2/bin/config_generate
 
+# 移除要替换的包
+rm -rf feeds/luci/applications/luci-app-passwall
+rm -rf feeds/luci/applications/luci-app-passwall2
+rm -rf feeds/luci/applications/luci-app-openclash
+
 # 设置默认主题
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-light/Makefile
+
+# x86 型号只显示 CPU 型号
+sed -i 's/${g}.*/${a}${b}${c}${d}${e}${f}${hydrid}/g' package/lean/autocore/files/x86/autocore
+
+# 修改版本为编译日期
+date_version=$(date +"%y.%m.%d")
+orig_version=$(cat "package/lean/default-settings/files/zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')
+sed -i "s/${orig_version}/R${date_version} by Haiibo/g" package/lean/default-settings/files/zzz-default-settings
+
+
 
 # Modify hostname
 # sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
