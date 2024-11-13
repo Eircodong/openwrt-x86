@@ -17,6 +17,11 @@ sed -i 's/192.168.1.1/192.168.100.1/g' package/base-files/luci2/bin/config_gener
 rm -rf feeds/luci/applications/luci-app-passwall
 rm -rf feeds/luci/applications/luci-app-passwall2
 rm -rf feeds/luci/applications/luci-app-openclash
+rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd*,miniupnpd-iptables,wireless-regdb}
+rm -rf feeds/smpackage/luci-app-argone-config
+rm -rf feeds/smpackage/luci-app-argon-config
+rm -rf feeds/smpackage/luci-theme-argone
+rm -rf feeds/smpackage/luci-theme-argon
 
 # 设置默认主题
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-light/Makefile
@@ -35,3 +40,4 @@ sed -i "s/${orig_version}/R${date_version} by Haiibo/g" package/lean/default-set
 # sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
 
 # 添加插件
+git clone https://github.com/jerrykuku/luci-app-argon-config.git
