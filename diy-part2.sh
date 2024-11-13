@@ -19,6 +19,15 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-l
 # Modify hostname
 # sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
 
+# Git稀疏克隆，只克隆指定目录到本地
+function git_sparse_clone() {
+  branch="$1" repourl="$2" && shift 2
+  git clone --depth=1 -b $branch --single-branch --filter=blob:none --sparse $repourl
+  repodir=$(echo $repourl | awk -F '/' '{print $(NF)}')
+  cd $repodir && git sparse-checkout set $@
+  mv -f $@ ../package
+  cd .. && rm -rf $repodir
+}
 
 # 添加插件
 git clone --depth=1 -b master https://github.com/rufengsuixing/luci-app-adguardhome package/luci-app-adguardhome
@@ -27,3 +36,6 @@ find ./ | grep Makefile | grep mosdns | xargs rm -f
 
 git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
 git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
+# 游戏加速器
+git_sparse_clone https://github.com/coolsnowwolf/luci/tree/openwrt-23.05/applications/luci-app-uugamebooster package/luci-app-uugamebooster
+git_sparse_clone https://github.com/coolsnowwolf/packages/tree/master/net/uugamebooster package/uugamebooster
