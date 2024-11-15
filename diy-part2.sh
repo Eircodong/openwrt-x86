@@ -38,3 +38,7 @@ git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages packa
 git clone --depth=1 -b main https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 package/luci-app-passwall2
 git clone --depth=1 -b master https://github.com/fw876/helloworld package/luci-app-ssr-plus
+
+# uu加速器下载失败
+sed -i "s/openwrt-$(ARCH)/v$(PKG_VERSION)/uu.tar.gz?/openwrt-\$(UU_ARCH)\/\$(PKG_VERSION)\//g" feeds/packages/net/uugamebooster/Makefile
+sed -i "s/\$(PKG_NAME)-\$(PKG_VERSION)-\$(ARCH).tar.gz/uu.tar.gz/g" feeds/packages/net/uugamebooster/Makefile
