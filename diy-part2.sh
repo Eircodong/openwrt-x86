@@ -18,10 +18,6 @@ rm -rf feeds/luci/applications/luci-app-passwall
 rm -rf feeds/luci/applications/luci-app-passwall2
 rm -rf feeds/luci/applications/luci-app-openclash
 rm -rf feeds/luci/themes/luci-theme-argon
-rm -rf package/net/chinadns-ng
-rm -rf package/net/sing-box
-rm -rf package/net/xray-core
-rm -rf package/utils/coremark
 
 # 设置默认主题
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-light/Makefile
