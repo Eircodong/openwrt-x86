@@ -14,7 +14,6 @@
 sed -i 's/192.168.1.1/192.168.100.1/g' package/base-files/luci2/bin/config_generate
 
 # 移除要替换的包
-rm -rf feeds/packages/net/adguardhome
 rm -rf feeds/luci/applications/luci-app-passwall
 rm -rf feeds/luci/applications/luci-app-passwall2
 rm -rf feeds/luci/applications/luci-app-openclash
@@ -40,7 +39,6 @@ sed -i "s/${orig_version}/R${date_version} by EircoD/g" package/lean/default-set
 
 # 添加插件
 git clone https://github.com/sirpdboy/luci-app-lucky.git package/lucky
-git clone --depth=1 -b master https://github.com/xiaoxiao29/luci-app-adguardhome package/luci-app-adguardhome
 git clone --depth=1 -b master https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 git clone --depth=1 -b master https://github.com/vernesong/OpenClash package/luci-app-openclash
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
