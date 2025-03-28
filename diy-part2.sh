@@ -57,6 +57,3 @@ git clone --depth=1 -b main https://github.com/linkease/nas-packages-luci packag
 git clone --depth=1 -b master https://github.com/linkease/nas-packages package/nas-packages
 git clone --depth=1 -b main https://github.com/linkease/istore package/istore
 
-# 解决uu加速器无法下载
-sed -i "s/openwrt-\$(UU_ARCH)\/\$(PKG_VERSION)\/uu.tar.gz?/openwrt-\$(UU_ARCH)\/\$(PKG_VERSION)\//g" feeds/packages/net/uugamebooster/Makefile
-sed -i "s/\$(PKG_NAME)-\$(UU_ARCH)-\$(PKG_VERSION).tar.gz/uu.tar.gz/g" feeds/packages/net/uugamebooster/Makefile
