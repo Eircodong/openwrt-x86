@@ -38,6 +38,7 @@ sed -i "s/${orig_version}/R${date_version} by EircoD/g" package/lean/default-set
 # sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
 
 # 添加插件
+git clone https://github.com/jerrykuku/luci-app-argon-config.git
 git clone https://github.com/sirpdboy/luci-app-lucky.git package/lucky
 git clone --depth=1 -b master https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 git clone --depth=1 -b master https://github.com/vernesong/OpenClash package/luci-app-openclash
