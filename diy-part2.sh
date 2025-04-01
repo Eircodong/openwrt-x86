@@ -57,3 +57,5 @@ git clone --depth=1 -b main https://github.com/linkease/nas-packages-luci packag
 git clone --depth=1 -b master https://github.com/linkease/nas-packages package/nas-packages
 git clone --depth=1 -b main https://github.com/linkease/istore package/istore
 
+#netwizard
+git clone --depth=1 https://github.com/sirpdboy/luci-app-netwizard package/luci-app-netwizard
