@@ -22,6 +22,7 @@ rm -rf feeds/packages/net/chinadns-ng
 rm -rf feeds/packages/net/geoview
 rm -rf feeds/packages/net/sing-box
 rm -rf feeds/packages/net/xray-core
+rm -rf feeds/packages/net/uugamebooster
 
 # 设置默认主题
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-light/Makefile
@@ -45,7 +46,8 @@ git clone --depth=1 -b master https://github.com/vernesong/OpenClash package/luc
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
 git clone --depth=1 -b main https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 package/openwrt-passwall2
-
+git clone https://github.com/Eircodong/packages-uugamebooster feeds/packages/net/uugamebooster
+git clone https://github.com/sirpdboy/luci-app-taskplan package/luci-app-taskplan
 # mosdns
 find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
 find ./ | grep Makefile | grep mosdns | xargs rm -f
